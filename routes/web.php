@@ -15,6 +15,8 @@ use App\Http\Controllers\EmployeeController;
 */
 
 // Route::get('/', function () {
-//     return view('employee');
+//     return view('welcome');
 // });
+
 Route::get('/', [EmployeeController::class, 'import']);
+Route::post('/import', [EmployeeController::class, 'Excel']);
